@@ -16,7 +16,6 @@
 $router->get('/', function () use ($router) {
 //    return $router->app->version();
     return phpinfo();
-//    return \Illuminate\Support\Str::random(32);
 });
 
 
