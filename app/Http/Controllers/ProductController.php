@@ -35,7 +35,6 @@ class ProductController extends Controller
             var_dump($e);
         }
         $product = Product::create($request->all());
-
         return response()->json($product, 201);
     }
 
@@ -49,15 +48,10 @@ class ProductController extends Controller
     }
 
 
-
     public function delete($id): JsonResponse
     {
         Product::findOrFail($id)->delete();
         return response()->json([
-            'error' => [
-                'code' => 204,
-                'message' => 'delete successful',
-            ]
         ], 204);
     }
 }
